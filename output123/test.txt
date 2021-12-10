@@ -1,0 +1,7 @@
+ansible-playbook mypath.yml --e '{my_path:/mnt/c/Shaun/playbook/output123}'
+ansible-playbook mypath.yml --e '{my_path:/mnt/c/Shaun/playbook/output123}'
+ansible-playbook mypath.yml --extra-vars=my_path=/mnt/c/Shaun/playbook/output123
+ansible-playbook mypath.yml -e=my_path=/mnt/c/Shaun/playbook/output123
+ansible-playbook mypath.yml --e '{my_path:/mnt/c/Shaun/playbook/output123}'
+ansible-playbook mypath.yml --extra-vars=my_path=/mnt/c/Shaun/playbook/output123
+ansible-playbook mypath.yml -e=my_path=/mnt/c/Shaun/playbook/output123

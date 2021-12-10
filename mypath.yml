@@ -1,0 +1,15 @@
+---
+- hosts: localhost
+  vars_files:
+   - vars.yml 
+  tasks:  
+  - name: Touch a file
+    shell: touch {{ my_path }}/test.txt
+  - name: echo in test
+    shell: echo "ansible-playbook mypath.yml --e '{"my_path":"/mnt/c/Shaun/playbook/output123"}'" >> {{ my_path }}/test.txt
+  - name: echo in test (2nd line)
+    shell: echo "ansible-playbook mypath.yml --extra-vars="my_path=/mnt/c/Shaun/playbook/output123"" >> {{ my_path }}/test.txt
+  - name: echo in test (3rd line)
+    shell: echo "ansible-playbook mypath.yml -e="my_path=/mnt/c/Shaun/playbook/output123"" >> {{ my_path }}/test.txt
+    
+    
